@@ -3,7 +3,7 @@
 /**
  * print_square - entry point
  * Description: prints #
- * @size: user input
+ * @n: user input
  * Return: void
 */
 
