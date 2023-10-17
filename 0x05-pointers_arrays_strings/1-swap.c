@@ -4,7 +4,7 @@
  * swap_int - entry point
  * Description: swap two integers
  * @x: user input
- * @y: user input 
+ * @y: user input
  * Return: nothing
 */
 
