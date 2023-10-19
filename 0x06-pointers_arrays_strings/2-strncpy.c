@@ -2,14 +2,15 @@
 #include "_strlen.c"
 
 /**
- * _strcat - entry point
+ * _strncpy - entry point
  * Description: appends src to dest
  * @src: user input
  * @dest: user destination
+ * @n: number of characters
  * Return: string
 */
 
-char *_strcat(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 	int j = 0;
@@ -26,9 +27,16 @@ char *_strcat(char *dest, char *src)
 			break;
 		}
 	}
-	for (i = j; i < _strlen(src) + j; i++)
+	for (i = 0; i < n; i++)
 	{
-		dest[i] = src[i - j];
+		dest[i] = src[i];
+	}
+	if (n > _strlen(src))
+	{
+		for (i = _strlen(src) + 1; i < n; i++)
+		{
+			dest[i] = 0x00;
+		}
 	}
 	return (dest);
 }
